@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ini halaman index</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}"></link>
+</head>
+<body>
+{% if not id %}
+    <h1>ini index biasa</h1>
+{% else %}
+    <h1>Ini get nya {{id}}</h1>
+{% endif %}
+
+<a href="{{url_for('login')}}">Login</a>
+<br>
+<a href="{{url_for('profile',name='joni')}}">Profile</a>
+<br>
+<a href="{{url_for('keluar')}}">Logout</a>
+</body>
+</html>
